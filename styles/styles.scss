@@ -1,41 +1,64 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 
-    background-color: #1E252B;
+  background-color: black;
+
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
 
-.main{
-    
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 30px;
-
-    &__string{
-        
-        margin-left: auto;
-        margin-right: auto;
-        width: 500px;
-        height: 25px;
-        background-color: white;
-        border: 0;
-        outline: 0;
-        border-radius: 20px;
-
-        color: black;
-        padding: 10px;
-    }
-}
-
-.btn{
-    background-color: #FF6E30;
-    color: white;
-    border: 0;
+  &__string {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 25px;
+    background-color: #fee801;
+    border: 2px solid #39c4b6;
+    text-shadow: 10px 10px 20px #39c4b6;
+    outline: 0;
     border-radius: 20px;
-    
+
+    color: black;
     padding: 10px;
+    padding-left: 35px;
+    // &::placeholder{
+    //     padding-left: 35px;
+    // }
+  }
+}
+
+.btn__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  width: 1200px;
+}
+
+.btn {
+  background-color: #fee801;
+  color: #00060e;
+  text-shadow: 1px 2px 2px #39c4b6;
+
+  border: 2px solid #39c4b6;
+  border-radius: 20px;
+  width: 250px;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
