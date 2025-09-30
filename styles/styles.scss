@@ -32,9 +32,13 @@ body {
     color: black;
     padding: 10px;
     padding-left: 35px;
-    // &::placeholder{
-    //     padding-left: 35px;
-    // }
+
+    border: 2px solid #39c4b6;
+    border: 2px solid #fee801;
+    
+    &:focus {
+      background-color: #39c4b6;
+    }
   }
 }
 
@@ -52,7 +56,7 @@ body {
   background-color: #fee801;
   color: #00060e;
   text-shadow: 1px 2px 2px #39c4b6;
-
+  font-size: 14px;
   border: 2px solid #39c4b6;
   border-radius: 20px;
   width: 250px;
@@ -60,5 +64,8 @@ body {
 
   &:hover {
     cursor: pointer;
+    background-color: #39c4b6;
+    border: 2px solid #fee801;
+    text-shadow: 1px 2px 2px #fee801;
   }
 }
