@@ -1,12 +1,13 @@
-let userInput = document.querySelector('userInput');
-let strSlice = document.querySelector('stringSlice');
-let strUpperCase = document.querySelector('stringToUpperCase');
-let strLowerCase = document.querySelector('stringToLowerCase');
-let strReplace = document.querySelector('stringReplace');
-let strTrim = document.querySelector('stringTrim');
-let strSplit = document.querySelector('stringSplit');
-let strEncrypt = document.querySelector('stringEncrypt');
-
+let userInput = document.querySelector('.userInput');
+let result = document.querySelector('.resultString')
+let strSlice = document.querySelector('.stringSlice');
+let strUpperCase = document.querySelector('.stringToUpperCase');
+let strLowerCase = document.querySelector('.stringToLowerCase');
+let strReplace = document.querySelector('.stringReplace');
+let strTrim = document.querySelector('.stringTrim');
+let strSplit = document.querySelector('.stringSplit');
+let strEncrypt = document.querySelector('.stringEncrypt');
+let copyResult = document.querySelector('.btnCopy')
 
 const sliceString = (str, i) =>{
    return str.slice(i);
@@ -22,4 +23,25 @@ const stringToLowerCase = (str)=>{
 
 const replaceString = (str) =>{
     return str.replace();
+}
+
+strUpperCase.onclick = function(){
+    console.log('click')
+    result.value = stringToUpperCase(userInput.value);
+    userInput.value = '';
+
+}
+
+copyResult.onclick = function(){
+    navigator.clipboard.writeText(result.value)
+    .then(() => {
+        console.log('Скопировано')
+        copyResult.textContent = 'Скопировано!';
+        
+    })
+    .catch(error => {
+        console.error(`Текст не скопирован ${error}`)
+  })
+
+  result.value = '';
 }
