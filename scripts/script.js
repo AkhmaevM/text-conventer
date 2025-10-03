@@ -1,5 +1,6 @@
 let userInput = document.querySelector('.userInput');
 let result = document.querySelector('.resultString')
+let btnIndexOf = document.querySelector('.stringIndexOf');
 let strSlice = document.querySelector('.stringSlice');
 let strUpperCase = document.querySelector('.stringToUpperCase');
 let strLowerCase = document.querySelector('.stringToLowerCase');
@@ -8,6 +9,7 @@ let strTrim = document.querySelector('.stringTrim');
 let strSplit = document.querySelector('.stringSplit');
 let strEncrypt = document.querySelector('.stringEncrypt');
 let copyResult = document.querySelector('.btnCopy')
+let indexOfInput = document.querySelector('.indexOfInput')
 
 const sliceString = (str, i) => {
     return str.slice(i);
@@ -56,3 +58,11 @@ copyResult.onclick = function () {
 
     result.value = '';
 }
+
+
+
+btnIndexOf.onclick = function (){
+    result.value = userInput.value.indexOf(indexOfInput.value)
+}
+
+
